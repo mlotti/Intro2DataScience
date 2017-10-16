@@ -17,12 +17,12 @@ process.p = cms.Path(
 )
 
 
-## not sure how these should be set (the name for the connect is not correct!): 
-process.GlobalTag.connect = cms.string('sqlite_file:/cvmfs/cms-opendata-conddb.cern.ch/START53_LV6.db')
-process.GlobalTag.globaltag = cms.string('START53_LV6::All')
+## these are OK: 
+process.GlobalTag.connect = cms.string('sqlite_file:/cvmfs/cms-opendata-conddb.cern.ch/START53_LV6A1.db')
+process.GlobalTag.globaltag = cms.string('START53_LV6A1::All')
 
 
-## we want only validated runs: ### NEED TO FIGURE OUT WHERE TO FIND THE .JSON FOR THIS!!!  
+## we want only validated runs: (wget the .txt file) 
 myLumis = LumiList.LumiList(filename='Cert_160404-180252_7TeV_ReRecoNov08_Collisions11_JSON.txt').getCMSSWString().split(',')
 process.source.lumisToProcess = cms.untracked.VLuminosityBlockRange()
 process.source.lumisToProcess.extend(myLumis)
