@@ -34,4 +34,4 @@ process.source.fileNames = cms.untracked.vstring( *files )
 
 process.maxEvents.input = 5
 process.MessageLogger.cerr.FwkReport.reportEvery = 1
-process.out.fileName = 'file://myTuple.root'
+process.out.fileName = 'myTuple.root'
