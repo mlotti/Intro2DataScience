@@ -17,12 +17,14 @@ process.p = cms.Path(
 )
 
 
-## these are OK: (soft links are needed to the database)
-process.GlobalTag.connect = cms.string('sqlite_file:/cvmfs/cms-opendata-conddb.cern.ch/START53_LVA1.db')
-process.GlobalTag.globaltag = cms.string('START53_LVA1::All')
+## soft links are needed to the database 
+## ln -sf /cvmfs/cms-opendata-conddb.cern.ch/START53_LV6A1 START53_LV6A1
+## ln -sf /cvmfs/cms-opendata-conddb.cern.ch/START53_LV6A1.db START53_LV6A1.db
+process.GlobalTag.connect = cms.string('sqlite_file:/cvmfs/cms-opendata-conddb.cern.ch/START53_LV6A1.db')
+process.GlobalTag.globaltag = cms.string('START53_LV6A1::All')
 
 
-## we want only validated runs: (wget the .txt file) 
+## we want only validated runs: (wget the .txt file)
 myLumis = LumiList.LumiList(filename='Cert_160404-180252_7TeV_ReRecoNov08_Collisions11_JSON.txt').getCMSSWString().split(',')
 process.source.lumisToProcess = cms.untracked.VLuminosityBlockRange()
 process.source.lumisToProcess.extend(myLumis)
