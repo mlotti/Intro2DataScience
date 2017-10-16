@@ -4,8 +4,8 @@ import FWCore.ParameterSet.Config as cms
 import FWCore.PythonUtilities.LumiList as LumiList
 import FWCore.Utilities.FileUtils as FileUtils
 
-## not sure what this does:
-removeMCMatching(process, ['All'])
+## in case of data sample:
+## removeMCMatching(process, ['All'])
 
 
 ## lets keep only jets
