@@ -17,9 +17,9 @@ process.p = cms.Path(
 )
 
 
-## these are OK: 
-process.GlobalTag.connect = cms.string('sqlite_file:/cvmfs/cms-opendata-conddb.cern.ch/START53_LV6A1.db')
-process.GlobalTag.globaltag = cms.string('START53_LV6A1::All')
+## these are OK: (soft links are needed to the database)
+process.GlobalTag.connect = cms.string('sqlite_file:/cvmfs/cms-opendata-conddb.cern.ch/START53_LVA1.db')
+process.GlobalTag.globaltag = cms.string('START53_LVA1::All')
 
 
 ## we want only validated runs: (wget the .txt file) 
