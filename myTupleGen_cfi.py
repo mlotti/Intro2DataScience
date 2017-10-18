@@ -35,5 +35,4 @@ process.source.fileNames = readFiles
 
 
 process.maxEvents.input = 5
-process.MessageLogger.cerr.FwkReport.reportEvery = 1
 process.out.fileName = 'myTuple.root'
