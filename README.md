@@ -7,12 +7,16 @@ cs CMSSW_5_3_32/src
 cmsenv
 ```
 
-copy the PatTools
+get the PatTools
 
 ```
-cp something to somewhere
+git commands
 ```
 
+copy stuff
+
+```
+```
 
 produce the trees
 
