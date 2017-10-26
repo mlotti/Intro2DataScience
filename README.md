@@ -14,5 +14,5 @@ cp something to somewhere
 
 
 ```
-cmsRun OpenDataTreeProducer_mc.py
+cmsRun OpenDataTreeProducer_mcPAT_2011_cfg.py
 ```
